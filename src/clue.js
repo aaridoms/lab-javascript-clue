@@ -155,12 +155,12 @@ const weaponsArray = [
 // let randomArr = [1, 2, 5, 60, 54, 34]
 function selectRandom(arr) {
 
-    if (arr.length === 0) {
-        return undefined;
-    }
+    // if (arr.length === 0) {
+    //     return undefined;
+    // }
 
     let randomIndex = Math.floor(Math.random() * arr.length);
-    return randomCard = arr[randomIndex]
+    return arr[randomIndex]
 
     // console.log(randomCard)  
 }
@@ -168,7 +168,10 @@ function selectRandom(arr) {
 function pickMystery() {
 
     let misteryCards = {
-
+        
+        // suspect: selectRandom(suspectsArray),
+        // weapon: selectRandom(weaponsArray),
+        // room: selectRandom(roomsArray)
     }
 
     misteryCards.suspect = selectRandom(suspectsArray)
@@ -182,12 +185,13 @@ function pickMystery() {
 // ITERATION 3
 
 function revealMystery(misteryObject) {
-    let mistery = pickMystery(misteryObject)
+    console.log(misteryObject)
+    // let mistery = pickMystery(misteryObject)
     // console.log(mistery.suspect.firstName, mistery.suspect.lastName, mistery.weapon.name, mistery.room.name)
-    let resultado = `${mistery.suspect.firstName} ${mistery.suspect.lastName} killed Mr. Boddy using the ${mistery.weapon.name} in the ${mistery.room.name}!`
-    console.log(resultado);
+    let resultado = `${misteryObject.suspect.firstName} ${misteryObject.suspect.lastName} killed Mr. Boddy using the ${misteryObject.weapon.name} in the ${misteryObject.room.name}!`
+    // console.log(resultado);
     return resultado
     // TODO FUNCIONANDO AUNQUE ESTE ULTIMO STRING ME SALE ROJO EN JASMINE
 }
 
-revealMystery()
+// revealMystery()
